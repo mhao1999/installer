@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>HelloAnim</Name>
+    <Version>1.0.0</Version>
+    <Title>HelloAnim安装程序</Title>
+    <Publisher>北京晓天信达科技有限公司</Publisher>
+    <!-- Directory name is used in component.xml -->
+    <StartMenuDir>HelloAnim</StartMenuDir>
+    <TargetDir>@ApplicationsDirX64@/HelloAnim</TargetDir>
+	<!--AdminRights>true</AdminRights-->
+    <Translations>
+        <Translation>zh_CN</Translation>
+    </Translations>
+</Installer>
