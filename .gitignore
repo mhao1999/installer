@@ -71,6 +71,7 @@ build/
 include/
 lib/
 data/
+repository/
 *.Debug
 *.Release
 

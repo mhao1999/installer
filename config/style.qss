@@ -1,0 +1,13 @@
+
+/* Optional: Customize other elements */
+QWizard::Title {
+    color: white;
+    font-size: 24px;
+}
+
+QWizard::SubTitle {
+    color: lightgray;
+    font-size: 16px;
+}
+
+

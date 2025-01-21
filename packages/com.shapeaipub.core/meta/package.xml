@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>形意智能</DisplayName>
+    <Description>
+		该版本包含：
+		- 修改lottie格式bug
+		- 增加公式移动动画
+	</Description>
+    <Version>1.0.10</Version>
+    <ReleaseDate>2025-01-01</ReleaseDate>
+    <Default>true</Default>
+    <Script>installscript.qs</Script>
+	<Essential>true</Essential>
+    <ForcedInstallation>true</ForcedInstallation>
+	<Licenses>
+        <License name="License Agreement" file="license.txt" />
+    </Licenses>
+	<Dependencies>com.shapeaipub.runtime</Dependencies>
+</Package>

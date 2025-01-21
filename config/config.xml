@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
-    <Name>HelloAnim</Name>
-    <Version>1.0.0</Version>
-    <Title>HelloAnim安装程序</Title>
+    <Name>形意智能</Name>
+    <Version>8.3.1</Version>
+    <Title>形意智能</Title>
     <Publisher>北京晓天信达科技有限公司</Publisher>
     <!-- Directory name is used in component.xml -->
-    <StartMenuDir>HelloAnim</StartMenuDir>
+    <StartMenuDir>形意智能</StartMenuDir>
+	<TitleColor>#FFFFFF</TitleColor>
     <TargetDir>@ApplicationsDirX64@/HelloAnim</TargetDir>
+	<InstallerWindowIcon>logo.png</InstallerWindowIcon>
+	<InstallerApplicationIcon>installericon</InstallerApplicationIcon>
+	<Watermark>background.png</Watermark>
+	<WizardStyle>Modern</WizardStyle>
+	<Banner>background-s.png</Banner>
+	<StyleSheet>style.qss</StyleSheet>
+	<ControlScript>controlscript.js</ControlScript>
+	<RemoteRepositories>
+		 <Repository>
+				 <Url>http://127.0.0.1:8080/</Url>
+				 <Enabled>1</Enabled>
+				 <DisplayName>Example repository</DisplayName>
+		 </Repository>
+	</RemoteRepositories>
 	<!--AdminRights>true</AdminRights-->
     <Translations>
-        <Translation>zh_CN</Translation>
+        <Translation>ifw_zh_CN</Translation>
+		<Translation>qt_zh_CN</Translation>
     </Translations>
 </Installer>

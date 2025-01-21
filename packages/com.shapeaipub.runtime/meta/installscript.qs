@@ -48,21 +48,17 @@ Component.prototype.createOperations = function()
         var targetDir = installer.value("TargetDir");
         var startMenuDir = installer.value("StartMenuDir");
 
-        // Define the shortcut path
-        var shortcutPath = startMenuDir + "\\HelloAnim.lnk";
-
-        // Create shortcut to HelloAnim.exe
-        component.addOperation("CreateShortcut", 
-            targetDir + "\\HelloAnim.exe",
-            shortcutPath,
-            "workingDirectory=" + targetDir,
-            "description=HelloAnim Application");
-
-        // Optionally create a shortcut to uninstall the program
-        component.addOperation("CreateShortcut",
-            programFiles + "\\HelloAnim\\uninstall.exe",
-            startMenuDir + "\\Uninstall HelloAnim.lnk",
-            "workingDirectory=" + programFiles + "\\HelloAnim",
-            "description=Uninstall HelloAnim");
-    }
+		// create directory in AppData/Roaming
+		// @HomeDir@ will be resolve to c:/users/{username}
+		// @ProductName@ will resolve to "HelloAnim" from config.xml
+		component.addOperation("Mkdir", "@HomeDir@/AppData/Roaming/@ProductName@");
+		component.addOperation("Mkdir", "@HomeDir@/AppData/Roaming/@ProductName@/assets");
+		component.addOperation("Mkdir", "@HomeDir@/AppData/Roaming/@ProductName@/assets/icons");
+		
+		// if you want to copy the assets folder to this location
+		component.addOperation("CopyDirectory", "@TargetDir@/assets", 
+				"@HomeDir@/AppData/Roaming/HelloAnim/assets");
+				
+		// component.addOperation("Rmdir", "@TargetDir@/assets/icons");
+	}
 }
