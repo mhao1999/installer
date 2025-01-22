@@ -1,16 +1,32 @@
-function Controller() {
-	
+function Controller()
+{
 	
 }
 
-Controller.prototype.IntroductionPageCallback = function() {
-    setBackgroundImage();
-};
+Controller.prototype.IntroductionPageCallback = function()
+{
+    if (installer.isUpdater()) {
+		gui.clickButton(buttons.NextButton);
+	}
+}
 
-function setBackgroundImage() {
-    // Set the background image for the current page
-    var widget = gui.currentPageWidget();
-    if (widget) {
-        widget.setStyleSheet("QWidget { background-image: url('banner.jpg'); background-position: center; background-repeat: no-repeat; }");
+Controller.prototype.ComponentSelectionPageCallback = function() 
+{
+	if (installer.isUpdater()) {
+		gui.clickButton(buttons.NextButton);
+	}
+}
+
+Controller.prototype.ReadyForInstallationPageCallback = function()
+{
+    if (installer.isUpdater()) {
+        gui.clickButton(buttons.CommitButton);
+    }
+}
+
+Controller.prototype.FinishedPageCallback = function()
+{
+    if (installer.isUpdater()) {
+        gui.clickButton(buttons.FinishButton);
     }
 }

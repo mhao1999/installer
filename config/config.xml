@@ -17,7 +17,7 @@
 	<ControlScript>controlscript.js</ControlScript>
 	<RemoteRepositories>
 		 <Repository>
-				 <Url>http://127.0.0.1:8080/</Url>
+				 <Url>https://harepository.oss-cn-beijing.aliyuncs.com/</Url>
 				 <Enabled>1</Enabled>
 				 <DisplayName>Example repository</DisplayName>
 		 </Repository>

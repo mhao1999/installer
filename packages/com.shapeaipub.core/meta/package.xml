@@ -6,7 +6,7 @@
 		- 修改lottie格式bug
 		- 增加公式移动动画
 	</Description>
-    <Version>1.0.10</Version>
+    <Version>1.0.28</Version>
     <ReleaseDate>2025-01-01</ReleaseDate>
     <Default>true</Default>
     <Script>installscript.qs</Script>
